@@ -9,6 +9,7 @@ const history = createBrowserHistory();
 const Home = asyncComponent(() => import("./../views/home/Home.jsx"));
 const Overview = asyncComponent(() => import("./../views/overview/index"));
 const User = asyncComponent(() => import("../views/user/User"));
+const Default = asyncComponent(() => import("../views/default"));
 class RouterConfig extends Component {
     render() {
         return (
@@ -18,6 +19,7 @@ class RouterConfig extends Component {
                         <Switch>
                             <Route path="/" exact component={Overview}></Route>
                             <Route path="/user" component={User}></Route>
+                            {/* <Route path="/:id" component={Default}></Route> */}
                         </Switch>
                     </Home>
                 </Router>

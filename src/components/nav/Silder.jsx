@@ -59,7 +59,8 @@ class Silder extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            menuList: menuList
+            menuList: menuList,
+            selectedKeys: []
         };
     }
     handleClick = (e) => {
@@ -67,6 +68,9 @@ class Silder extends React.Component {
             this.props.history.push(e.key);
         }
     };
+    componentDidMount() {
+        console.log(this);
+    }
 
     render() {
         return (
@@ -75,7 +79,6 @@ class Silder extends React.Component {
                 onClick={this.handleClick}
                 style={{ width: 256 }}
                 defaultSelectedKeys={["/"]}
-                defaultOpenKeys={["sub1"]}
                 mode="inline">
                 {}
                 {this.state.menuList.map((menu) =>
