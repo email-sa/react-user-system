@@ -82,10 +82,10 @@ module.exports = {
     allowBreakingChanges: ["feat", "fix"],
 
     // 跳过要询问的步骤
-    skipQuestions: ["body", "footer"],
+    skipQuestions: ["body", "footer"]
 
     // subject 限制长度
-    subjectLimit: 100
+    // subjectLimit: 100
     // breaklineChar: '|', // 支持 body 和 footer
     // footerPrefix : 'ISSUES CLOSED:'
     // askForBreakingChangeFirst : true,
